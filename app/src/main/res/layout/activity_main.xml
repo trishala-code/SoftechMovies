@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tasksContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/serachView"
+                android:layout_alignParentTop="true"
+                android:queryHint="Search movie or series "
+                android:background="#D6DBDE"
+                android:focusable="true"
+                />
+
+                <TextView
+                    android:text="@string/No_Data_MSG"
+                    android:gravity="center|center_horizontal"
+                    android:id="@+id/swipe_msg_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_below="@+id/serachView"
+                        android:id="@+id/movies_recycler_list"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminateDrawable="@drawable/progressbar"
+                    android:layout_gravity="center_horizontal"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:layout_marginBottom="1dp"
+    android:background="#706969"
+    android:elevation="10dp"
+    card_view:cardCornerRadius="10dp">
+
+     <LinearLayout android:id="@+id/movies_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+         android:weightSum="2"
+         android:background="#0E0E0E"
+         app:layout_constraintCircleRadius="12dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_weight="1"
+                    android:id="@+id/iv_movie"
+                    android:layout_below="@+id/llmain"
+                    android:src="@drawable/ic_launcher_background"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:civ_border_color="#3f51b5"
+                    app:civ_border_width="4dp"
+                    android:fitsSystemWindows="true"
+                    android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/llmain"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                tools:text="Avengers"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:paddingRight="16dp"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Published Year : "/>
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="1989"
+                    android:paddingRight="16dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
